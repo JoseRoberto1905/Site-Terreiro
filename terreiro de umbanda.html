@@ -1,0 +1,106 @@
+er<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terreiro de Umbanda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #b10606;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #b10606;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+        }
+        nav a:hover {
+            background-color: #b10606;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #b10606;
+            color: #fff;
+        }
+        .protected {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Casa de Caridade Sete Raios Segrados de Aruanda</h1>
+    </header>
+    <nav>
+        <a href="#historia">História da Umbanda</a>
+        <a href="#calendario">Calendário</a>
+        <a href="#area-interna">Área Interna</a>
+    </nav>
+
+    <section id="historia">
+        <h2>História da Umbanda</h2>
+        <p>A Umbanda é uma religião brasileira que mistura elementos do catolicismo, espiritismo, religiões africanas e indígenas. Foi fundada em 1908 por Zélio Fernandino de Moraes, que recebeu a missão de trazer uma doutrina de amor, caridade e respeito.</p>
+        <p>Acreditamos em espíritos elevados que nos guiam e ajudam a promover a caridade por meio de atendimentos espirituais e cantos sagrados, chamados pontos.</p>
+    </section>
+
+    <section id="calendario">
+        <h2>Calendário</h2>
+        <p>Giras do Mes de Janeiro:</p>
+        <ul>
+            <li>18/01/2025 - Gira de Esqurda</li>
+            <li>25/01/2025 - Gira de Caboclo com Homenagem para Oxossi</li>
+            <li>30/01/2025 - Gira de Crianças</li>
+        </ul>
+    </section>
+
+    <section id="area-interna">
+        <h2>Área Interna</h2>
+        <form onsubmit="return acessarAreaInterna()">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" required>
+            <button type="submit">Acessar</button>
+        </form>
+        <div class="protected" id="conteudo-restrito">
+            <h3>Conteúdo Privado</h3>
+            <p><a href="https://drive.google.com/file/d/1-rQ_05bu5qiSavFCHFnD37acE7JlqTYX/view?usp=sharing" target="_blank">Download de pontos de Caboclo</a></p>
+			<p><a href="https://drive.google.com/file/d/1-rQ_05bu5qiSavFCHFnD37acE7JlqTYX/view?usp=sharing" target="_blank">Download de pontos de Cigano</a></p>
+            <p><a href="https://youtube.com/playlist?list=PL1Y0I5zStdeaDr4-nQG5ph3w4qkxkpUWs&si=l_lm_T7tJyhrZvWD" target="_blank">Pontos da gira de Caboclo</a></p>
+			<p><a href="https://youtube.com/playlist?list=PL1Y0I5zStdeasD3sPsP4f0hhFsB2wP16i&si=s6dOXeLJDt6uFVOA" target="_blank">Pontos da gira de Cigano</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Sete Raios Sagrados de Aruanda. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function acessarAreaInterna() {
+            const senha = document.getElementById('senha').value;
+            const conteudo = document.getElementById('conteudo-restrito');
+            if (senha === '1234') {
+                conteudo.style.display = 'block';
+            } else {
+                alert('Senha incorreta!');
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
